@@ -20,6 +20,7 @@ type Todo struct {
 
 func main() {
 	log.Println("Connecting database")
+	l
 	db, err := gorm.Open(sqlite.Open("../todo.db"), &gorm.Config{})
 
 	getAll := func() ([]Todo, error) {
