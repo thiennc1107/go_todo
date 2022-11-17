@@ -19,8 +19,6 @@ type Todo struct {
 }
 
 func main() {
-	log.Println("Connecting database")
-	l
 	db, err := gorm.Open(sqlite.Open("../todo.db"), &gorm.Config{})
 
 	getAll := func() ([]Todo, error) {
@@ -100,6 +98,5 @@ func main() {
 		return c.JSON(todos)
 	})
 
-	log.Println("Server is running on port 4000")
 	log.Fatal(app.Listen(":4000"))
 }
